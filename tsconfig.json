@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",                        // Use modern JS features
+    "module": "commonjs",                      // Playwright test runner expects CommonJS
+    "lib": ["ESNext", "DOM"],                  // Include browser + latest JS APIs
+    "strict": true,                            // Enable strict type checking
+    "esModuleInterop": true,                   // Allow default imports from CommonJS
+    "skipLibCheck": true,                      // Skip checking type definitions for dependencies
+    "forceConsistentCasingInFileNames": true,  // Ensure case consistency across files
+    "resolveJsonModule": true,                 // Allow importing JSON test data/configs
+    "outDir": "dist",                          // Output compiled JS (if needed)
+    "rootDir": ".",                            // Root folder for source files
+    "types": ["@playwright/test"]              // Include Playwright’s global types
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}
