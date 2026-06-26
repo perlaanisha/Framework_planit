@@ -1,0 +1,192 @@
+# Playwright UI Automation Framework
+
+## Technology Stack
+
+- Playwright
+- TypeScript
+- Node.js
+- Page Object Model (POM)
+
+## Features
+
+- Clean and simple framework
+- Reusable Page Objects
+- Easy to maintain
+- HTML reporting
+- CI/CD ready
+
+## Overview
+
+This project contains automated UI tests for the Jupiter Toys application using **Playwright** and **TypeScript**.
+
+**Application URL:**
+http://jupiter.cloud.planittesting.com
+
+The framework follows the **Page Object Model (POM)** to keep the code simple, reusable, and easy to maintain.
+
+---
+
+## Project Structure
+
+```
+PLANIT_AUTO_TEST
+│
+├── pages
+│   ├── HomePage.ts
+│   ├── ContactPage.ts
+│   ├── ShopPage.ts
+│   └── CartPage.ts
+│
+├── tests
+│   ├── contact.spec.ts
+│   ├── submit.spec.ts
+│   └── cart.spec.ts
+│
+├── playwright.config.ts
+├── package.json
+├── tsconfig.json
+└── README.md
+```
+
+---
+
+## Prerequisites
+
+Make sure the following are installed:
+
+- Node.js (v18.18.0)
+- npm (9.8.1)
+
+---
+
+## Installation
+
+Clone the repository:
+npm
+```bash
+git clone <repository-url>
+```
+
+Go to the project folder:
+
+```bash
+cd PLANIT_AUTO_TEST
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Install Playwright browsers:
+
+```bash
+npx playwright install
+```
+
+---
+
+## Running Tests
+
+Run all tests:
+
+```bash
+npx playwright test
+```
+
+Run a specific test file:
+
+```bash
+npx playwright test tests/contact.spec.ts
+```
+
+Run tests in headed mode:
+
+```bash
+npx playwright test --headed
+```
+
+Run tests using Chrome:
+
+```bash
+npx playwright test --project=chromium
+```
+
+---
+
+## Test Cases
+
+### Test Case 1
+
+- Navigate to Contact page
+- Click Submit without entering data
+- Verify mandatory field validation messages
+- Enter mandatory fields
+- Verify validation messages disappear
+
+---
+
+### Test Case 2
+
+- Navigate to Contact page
+- Enter mandatory fields
+- Submit the form
+- Verify successful submission
+- Test is executed **5 times** to ensure a 100% pass rate
+
+---
+
+### Test Case 3
+
+- Purchase:
+  - 2 Stuffed Frog
+  - 5 Fluffy Bunny
+  - 3 Valentine Bear
+- Navigate to Cart
+- Verify:
+  - Product prices
+  - Product subtotals
+  - Cart total equals the sum of all subtotals
+
+---
+
+## Framework Design
+
+This project uses:
+
+- Playwright
+- TypeScript
+- Page Object Model (POM)
+
+Each application page has its own class containing page actions and locators, making the framework easier to maintain and reuse.
+
+---
+
+## Reports
+
+After execution, Playwright generates an HTML report.
+
+To open the report:
+
+```bash
+npx playwright show-report
+```
+
+---
+
+## CI/CD
+
+The project can be integrated with Jenkins, GitHub Actions, or Azure DevOps by executing:
+
+```bash
+npm install
+npx playwright install
+npx playwright test
+```
+
+---
+
+## Author
+
+Developed using Playwright and TypeScript for the Planit Technical Assessment.
