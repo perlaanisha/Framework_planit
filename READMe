@@ -45,6 +45,7 @@ PLANIT_AUTO_TEST
 ├── playwright.config.ts
 ├── package.json
 ├── tsconfig.json
+├── Jenkinsfile
 └── README.md
 ```
 
